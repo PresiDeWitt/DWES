@@ -1,0 +1,9 @@
+/* Copia de assets/css/style.css para servir desde public/assets */
+/* Simple estilos para pruebas */
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f6f6;color:#222}
+.container{max-width:900px;margin:20px auto;padding:16px;background:#fff;border:1px solid #e6e6e6}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ccc;padding:8px;text-align:left}
+.notice{color:green}
+.error{color:red}
+nav a{margin-right:8px}
