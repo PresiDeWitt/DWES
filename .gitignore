@@ -1,0 +1,59 @@
+# .gitignore para el proyecto DWES
+
+# Sistema / OS
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.idea/
+.vscode/
+*.iml
+/.history/
+
+# Node / frontend
+node_modules/
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# Entornos / secrets
+.env
+docker/.env
+*.pem
+*.key
+
+# Docker
+docker/*.log
+docker/*.pid
+docker/.env
+/docker/.env
+
+# Logs / temporales
+*.log
+tmp/
+temp/
+.cache/
+uploads/
+
+# Builds / dist
+dist/
+build/
+
+# PHPUnit / coverage
+coverage/
+.phpunit.result.cache
+
+# Vim / swap
+*.swp
+*~
+
+# OS X
+.AppleDouble
+.LSOverride
+
+# Misc
+backup_*
+
+# Allow list: don't ignore example data files inside web (e.g. web/T02/data/productos.txt)
+# (If you want to ignore a specific data file, add it explicitly.)
