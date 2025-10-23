@@ -1,0 +1,27 @@
+/* Styles extracted from includes/header.php for Tarea 3 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Table base */
+table { border-collapse: collapse; }
+td { padding: 8px; }
+
+/* Estilos para la tabla generada por la función tabla() */
+.num-table { border: 1px solid #ccc; border-collapse: collapse; }
+.num-table td { border: 1px solid #ccc; padding: 6px 10px; text-align: center; }
+
+/* Small helpers */
+.header-title { font-size: 1.4rem; margin-bottom: 8px; }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .num-table td { padding: 4px 6px; }
+}
+
