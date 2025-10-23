@@ -1,0 +1,22 @@
+# Habilitar rewrite engine
+RewriteEngine On
+
+# Desactivar listado de directorios (evitar Index of /)
+Options -Indexes
+
+# Configuración de seguridad básica
+<Files ".ht*">
+    Require all denied
+</Files>
+
+# Si la solicitud no es para un archivo existente
+RewriteCond %{REQUEST_FILENAME} !-f
+# Si la solicitud no es para un directorio existente
+RewriteCond %{REQUEST_FILENAME} !-d
+# Redirigir al index principal
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+# Permitir acceso a todos los archivos PHP
+<Files "*.php">
+    Require all granted
+</Files>
