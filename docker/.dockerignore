@@ -1,14 +1,35 @@
+# .dockerignore - archivos a excluir del contexto de build de Docker (ubicado en docker/)
+
+# Git
 .git
-../T02/.gitignore
-.idea
-.docker
-Dockerfile
-docker-compose.yml
-node_modules
-vendor
+.gitignore
+
+# IDEs / editores
+.idea/
+.vscode/
+*.iml
+
+# Dependencias / node / php
+node_modules/
+vendor/
+
+# Secrets / env
+.env
+*.pem
+*.key
+
+# Sistema / temporales / logs
+.DS_Store
+Thumbs.db
+tmp/
+temp/
 *.log
 *.cache
-.DS_Store
-tmp
-.env
+*.swp
+*~
 
+# Build artefacts
+dist/
+build/
+
+# No ignoramos Dockerfile ni docker-compose.yml aquí (están en este mismo directorio y el build los necesita)
