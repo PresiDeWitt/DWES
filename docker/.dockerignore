@@ -1,0 +1,14 @@
+.git
+../T02/.gitignore
+.idea
+.docker
+Dockerfile
+docker-compose.yml
+node_modules
+vendor
+*.log
+*.cache
+.DS_Store
+tmp
+.env
+
