@@ -63,6 +63,6 @@ include __DIR__ . '/includes/header.php';
         <?php if ($error): ?><p class="error"><?php echo $error; ?></p><?php endif; ?>
         <?php if ($resultado !== null): ?><p class="notice"><strong>Resultado:</strong> <?php echo $resultado; ?></p><?php endif; ?>
 
-        <p><a href="index.php">Volver</a></p>
+    <p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

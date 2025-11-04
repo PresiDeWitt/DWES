@@ -13,6 +13,6 @@ include __DIR__ . '/includes/header.php';
         <p><?php echo $nombreNif; ?></p>
         <p><?php echo htmlentities($nota); ?></p>
 
-        <p><a href="index.php">Volver</a></p>
+    <p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

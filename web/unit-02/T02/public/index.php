@@ -14,6 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Incluir header para mantener la misma estructura que en productos.php
+include __DIR__ . '/includes/header.php';
+
 ?>
         <h1>Fecha: <?php echo htmlspecialchars($date, ENT_QUOTES, 'UTF-8'); ?></h1>
 
@@ -42,5 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="ra02f.php">RA02_F - Configuración PHP/Apache</a></li>
             </ul>
         </nav>
+
+        <!-- Enlace para volver al índice general del proyecto -->
+        <p style="margin-top:16px;"><a href="/index.php">← Volver al índice general</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

@@ -4,14 +4,19 @@
 $tasks = [
     'T02' => [
         'name' => 'Tarea 02 - Fundamentos PHP',
-        'path' => 'T02/public/',
+        'path' => 'unit-02/T02/public/',
         'description' => 'Ejercicios básicos de PHP: formularios, fechas, productos, calculadora'
     ],
     'T03' => [
         'name' => 'Tarea 03 - PHP Avanzado',
-        'path' => 'T03/public/',
+        'path' => 'unit-03/T03/public/',
         'description' => 'Manejo de formularios, arrays, bucles y funciones en PHP'
-    ]
+    ],
+        'sesiones' => [
+        'name' => 'Tarea 04 - Sesiones y Cookies',
+        'path' => 'unit-04/sesiones/public/',
+        'description' => 'Gestión de sesiones y cookies en PHP'
+    ],
 ];
 
 // Función para verificar si un directorio existe
@@ -49,7 +54,6 @@ function taskExists($path) {
                 <div class="task-actions">
                     <?php if ($exists): ?>
                         <a href="<?php echo htmlspecialchars($task['path']); ?>" class="btn" target="_blank">↗️ Abrir en nueva pestaña</a>
-                        <a href="?source=<?php echo urlencode($task['path'] . 'index.php'); ?>" class="btn btn-secondary" target="_blank">📄 Ver Código</a>
                     <?php else: ?>
                         <span class="btn btn-secondary" style="cursor:default;">No disponible</span>
                     <?php endif; ?>

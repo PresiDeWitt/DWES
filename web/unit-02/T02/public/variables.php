@@ -19,6 +19,6 @@ include __DIR__ . '/includes/header.php';
         mostrar_mensaje();
         echo "<p>Mensaje global fuera de la función: " . htmlspecialchars($mensaje) . "</p>";
         ?>
-        <p><a href="index.php">Volver</a></p>
+    <p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

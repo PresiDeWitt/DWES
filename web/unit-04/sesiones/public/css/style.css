@@ -1,0 +1,14 @@
+/* Estilos simples para Unit-04 sesiones */
+body{ font-family: Arial, Helvetica, sans-serif; margin:18px; background:#f7f7f8; color:#222; }
+.container{ max-width:980px; margin:0 auto; }
+.grid{ display:flex; gap:18px; flex-wrap:wrap; }
+.card{ background:#fff; border:1px solid #e0e0e0; padding:12px; border-radius:6px; width:260px; box-shadow:0 1px 2px rgba(0,0,0,0.03); }
+.card h3{ margin-top:0; }
+.btn{ display:inline-block; padding:8px 12px; background:#2d6cdf; color:#fff; text-decoration:none; border-radius:4px; }
+.btn:hover{ background:#224fb3 }
+.site-header .nav a{ margin-right:12px; }
+.site-header h1{ margin:0 0 6px 0; }
+main.container{ padding:8px; }
+section{ margin-top:12px; }
+footer.site-footer{ text-align:center; margin-top:12px; }
+

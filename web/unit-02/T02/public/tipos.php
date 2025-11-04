@@ -1,4 +1,4 @@
-<?php
+w<?php
 // public/tipos.php
 require_once __DIR__ . '/../src/config.php';
 
@@ -22,6 +22,6 @@ include __DIR__ . '/includes/header.php';
             <li>Constante PI: <?php echo PI; ?></li>
         </ul>
         <p>Suma entero + decimal = <?php echo $sum; ?></p>
-        <p><a href="index.php">Volver</a></p>
+<p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

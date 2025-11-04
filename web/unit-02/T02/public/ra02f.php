@@ -20,6 +20,6 @@ include __DIR__ . '/includes/header.php';
             <li><strong>No mostrar errores</strong>: en <code>php.ini</code> pon <code>display_errors = Off</code> y <code>log_errors = On</code>. Alternativamente en tiempo de ejecución: <code>ini_set('display_errors', 0); error_reporting(0);</code>.</li>
         </ul>
 
-        <p><a href="index.php">Volver</a></p>
+    <p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';

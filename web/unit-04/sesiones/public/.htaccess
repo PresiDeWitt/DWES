@@ -1,0 +1,13 @@
+# .htaccess mínimo para usar public/index.php como front controller
+RewriteEngine On
+# Evitar reescritura para archivos y directorios existentes
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirigir odo lo demás a index.php
+RewriteRule ^ index.php [L,QSA]
+
+# Establecer index por defecto
+DirectoryIndex index.php
+

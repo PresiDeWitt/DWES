@@ -20,6 +20,6 @@ echo "Hola mundo";
 
 &lt;?= "Hola mundo" ?&gt;</pre>
 
-        <p><a href="index.php">Volver</a></p>
+    <p><a href="index.php">Volver</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';
