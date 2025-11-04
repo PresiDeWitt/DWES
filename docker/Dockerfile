@@ -1,12 +1,12 @@
 # Dockerfile para servir el proyecto con Apache + PHP
 FROM php:8.2-apache
 
-# Copiamos todo el proyecto al contenedor y asignamos permisos al usuario www-data
+# Copiamos tdo el proyecto al contenedor y asignamos permisos al usuario www-data
 COPY --chown=www-data:www-data . /var/www/html/
 
 # Copiar configuración PHP personalizada (si existe)
 # php.ini está dentro de la carpeta docker en el contexto de build
-COPY docker/php.ini /usr/local/etc/php/conf.d/custom.ini
+COPY docker/config/php.ini /usr/local/etc/php/conf.d/custom.ini
 
 # Cambiamos DocumentRoot de Apache a /var/www/html/public y activamos rewrite
 RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf \
