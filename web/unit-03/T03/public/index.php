@@ -1,5 +1,5 @@
 <?php
-// index.php - Página principal para la Tarea 3
+// indexUnit-04.php - Página principal para la Tarea 3
 
 // Cargar funciones y helpers
 require_once __DIR__ . '/../src/config.php';
@@ -129,6 +129,7 @@ include __DIR__ . '/includes/header.php';
     <h2>Números 1 a 10 con par/impar</h2>
     <?php echo $paridad_html; ?>
 </section>
+    <p style="margin-top:16px;"><a href="../../../index.php">← Volver al índice general</a></p>
 
 <?php
 // Incluir footer
