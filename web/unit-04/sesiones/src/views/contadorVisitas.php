@@ -13,5 +13,5 @@ if (!isset($baseUrl)) {
         <p>Visitas en esta sesión: <?php echo intval($_SESSION['visitas']); ?></p>
     <?php endif; ?>
 
-    <p><a href="<?php echo htmlspecialchars($baseUrl); ?>/index.php?page=contador&reset=1">Reiniciar contador</a></p>
+    <p><a href="index.php?page=contador&reset=1">Reiniciar contador</a></p>
 </section>

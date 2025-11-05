@@ -24,5 +24,7 @@ $elapsed = implode(' ', $partes);
     <h2>Sesión activa</h2>
     <p>Sesión iniciada: <?php echo date('Y-m-d H:i:s', $inicio); ?></p>
     <p>Tiempo de sesión: <?php echo $elapsed; ?></p>
-    <p><a href="<?php echo htmlspecialchars($baseUrl); ?>/index.php?page=sesion&reset=1">Reiniciar sesión</a></p>
+    <?php // Construir href de reinicio respetando baseUrl del módulo ?>
+    <?php $resetHref = ($baseUrl === '') ? 'index.php?page=sesion&reset=1' : $baseUrl . '/index.php?page=sesion&reset=1'; ?>
+    <p><a href="<?php echo $resetHref; ?>">Reiniciar sesión</a></p>
 </section>

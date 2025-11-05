@@ -10,9 +10,9 @@ if (!isset($baseUrl)) {
 
     <?php if (!empty($_SESSION['usuario_nombre'])): ?>
         <p>Hola <?php echo $_SESSION['usuario_nombre']; ?>, bienvenido de nuevo.</p>
-        <p><a href="<?php echo htmlspecialchars($baseUrl); ?>/index.php?page=usuario&logout=1">Eliminar nombre</a></p>
+        <p><a href="index.php?page=usuario&logout=1">Eliminar nombre</a></p>
     <?php else: ?>
-        <form method="post" action="<?php echo htmlspecialchars($baseUrl); ?>/index.php?page=usuario">
+        <form method="post" action="index.php?page=usuario">
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" required>
             <button type="submit">Enviar</button>
