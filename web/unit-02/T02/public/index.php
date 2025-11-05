@@ -47,6 +47,6 @@ include __DIR__ . '/includes/header.php';
         </nav>
 
         <!-- Enlace para volver al índice general del proyecto -->
-        <p style="margin-top:16px;"><a href="/index.php">← Volver al índice general</a></p>
+        <p style="margin-top:16px;"><a href="../../../index.php">← Volver al índice general</a></p>
 
 <?php include __DIR__ . '/includes/footer.php';
