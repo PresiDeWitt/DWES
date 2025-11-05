@@ -1,27 +1,34 @@
 <?php
-// index.php - Índice principal de todas las tareas DWES
+// indexUnit-04.php - Índice principal de todas las tareas DWES
 
 $tasks = [
-    'T02' => [
-        'name' => 'Tarea 02 - Fundamentos PHP',
-        'path' => 'unit-02/T02/public/',
-        'description' => 'Ejercicios básicos de PHP: formularios, fechas, productos, calculadora'
-    ],
-    'T03' => [
-        'name' => 'Tarea 03 - PHP Avanzado',
-        'path' => 'unit-03/T03/public/',
-        'description' => 'Manejo de formularios, arrays, bucles y funciones en PHP'
-    ],
-        'sesiones' => [
-        'name' => 'Tarea 04 - Sesiones y Cookies',
-        'path' => 'unit-04/sesiones/public/',
-        'description' => 'Gestión de sesiones y cookies en PHP'
-    ],
+        'T02' => [
+                'name' => 'Tarea 02 - Fundamentos PHP',
+                'path' => 'unit-02/T02/public/',
+                'description' => 'Ejercicios básicos de PHP: formularios, fechas, productos, calculadora'
+        ],
+        'T03' => [
+                'name' => 'Tarea 03 - PHP Avanzado',
+                'path' => 'unit-03/T03/public/',
+                'description' => 'Manejo de formularios, arrays, bucles y funciones en PHP'
+        ],
+        'T04' => [
+                'name' => 'Tarea 04 - Sesiones, Cookies y Seguridad',
+                // apuntar al índice de Unit-04 que reúne sesiones y security
+                'path' => 'unit-04/indexUnit-04.php',
+                'url' => 'unit-04/indexUnit-04.php',
+                'description' => 'Índice Unit-04: Sesiones, Cookies y Seguridad'
+        ],
 ];
 
-// Función para verificar si un directorio existe
+// Función para verificar si una tarea existe (acepta archivo o carpeta con index.php)
 function taskExists($path) {
-    return is_dir(__DIR__ . '/' . $path) && file_exists(__DIR__ . '/' . $path . 'index.php');
+    $full = __DIR__ . '/' . $path;
+    // Si es un archivo (por ejemplo indexUnit-04.php)
+    if (is_file($full)) return true;
+    // Si es un directorio que contiene index.php
+    if (is_dir($full) && file_exists(rtrim($full, '/\\') . DIRECTORY_SEPARATOR . 'index.php')) return true;
+    return false;
 }
 
 ?>
@@ -53,7 +60,10 @@ function taskExists($path) {
 
                 <div class="task-actions">
                     <?php if ($exists): ?>
-                        <a href="<?php echo htmlspecialchars($task['path']); ?>" class="btn" target="_blank">↗️ Abrir en nueva pestaña</a>
+                        <?php $href = isset($task['url']) ? $task['url'] : $task['path'];
+                              // abrir en la misma pestaña solamente si es el índice de Unit-04
+                              $target = ($href === 'unit-04/indexUnit-04.php') ? '' : ' target="_blank"'; ?>
+                        <a href="<?php echo htmlspecialchars($href); ?>" class="btn"<?php echo $target; ?>>↗️ Abrir</a>
                     <?php else: ?>
                         <span class="btn btn-secondary" style="cursor:default;">No disponible</span>
                     <?php endif; ?>
