@@ -5,13 +5,16 @@
 session_start();
 
 $viewDir = __DIR__ . '/../views/';
-$baseUrl = dirname($_SERVER['PHP_SELF']);
+// Calcular baseUrl y prefijo de redirección de forma robusta
+$baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+if ($baseUrl === '/' || $baseUrl === '\\') $baseUrl = '';
+$redirectPrefix = ($baseUrl === '') ? '' : $baseUrl . '/';
 
 // Manejar logout/olvido
 if (isset($_GET['logout'])) {
     unset($_SESSION['usuario_nombre']);
-    // Redirigir de forma relativa al front controller del módulo
-    header('Location: index.php?page=usuario');
+    // Redirigir al front controller del módulo
+    header('Location: ' . $redirectPrefix . 'index.php?page=usuario');
     exit;
 }
 
@@ -20,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'])) {
     if ($nombre !== '') {
         // Guardar nombre escapado
         $_SESSION['usuario_nombre'] = htmlspecialchars($nombre, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-        header('Location: index.php?page=usuario');
+        header('Location: ' . $redirectPrefix . 'index.php?page=usuario');
         exit;
     }
 }
@@ -28,4 +31,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'])) {
 include $viewDir . 'layout/header.php';
 include $viewDir . 'guardarNombreUser.php';
 include $viewDir . 'layout/footer.php';
-
