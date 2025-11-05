@@ -16,6 +16,15 @@ $routes = [
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 if ($page === 'home') {
+    // Calcular base URL relativa para recursos (evita rutas absolutas que no coinciden con el document root)
+    $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    if ($baseUrl === '/' || $baseUrl === '\\') {
+        $baseUrl = '';
+    }
+
+    // Construir href del CSS de forma robusta: si $baseUrl está vacío usamos ruta relativa
+    $assetsHref = ($baseUrl === '') ? 'assets/css/style.css' : $baseUrl . '/assets/css/style.css';
+
     // Mostrar índice simple con tarjetas
     ?>
     <!doctype html>
@@ -24,7 +33,7 @@ if ($page === 'home') {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Unit 04 - Sesiones</title>
-        <link rel="stylesheet" href="/unit-04/sesiones/public/css/style.css">
+        <link rel="stylesheet" href="<?php echo $assetsHref; ?>">
     </head>
     <body>
         <main class="container">
