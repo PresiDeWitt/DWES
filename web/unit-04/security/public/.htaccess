@@ -1,0 +1,13 @@
+# Evitar listado de directorios y forzar index.php como front controller
+Options -Indexes
+DirectoryIndex index.php
+
+RewriteEngine On
+# No reescribir archivos o directorios existentes
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirigir todo lo demás al front controller
+RewriteRule ^ index.php [L,QSA]
+
