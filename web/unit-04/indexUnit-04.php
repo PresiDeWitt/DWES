@@ -8,6 +8,12 @@ $tasks = [
         'url' => 'sesiones/public/',
         'description' => 'Ejercicios de sesiones: contador, guardar nombre, sesión activa'
     ],
+    'cookies2' => [
+        'name' => 'Sesiones y Cookies II',
+        'path' => 'cookies2/public/',
+        'url' => 'cookies2/public/',
+        'description' => 'Carrito de compras, preferencias de usuario y temporizador de sesión'
+    ],
     'security' => [
         'name' => 'Seguridad',
         'path' => 'security/public/',
@@ -40,7 +46,7 @@ function taskExists($path) {
 </head>
 <body>
 <main class="wrap">
-    <h1>Unit 04 - Seguridad y Sesiones</h1>
+    <h1>Unit 04 - Seguridad, Sesiones y Cookies</h1>
     <p>Selecciona una página:</p>
 
     <section class="grid">
