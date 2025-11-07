@@ -8,5 +8,5 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Redirigir todo lo demás al front controller
+# Redirigir tdo lo demás al front controller
 RewriteRule ^ index.php [L,QSA]
