@@ -6,7 +6,10 @@ if (empty($_SESSION['user']) || ($_SESSION['user']['role'] ?? '') !== 'admin') {
 }
 ?>
 <section>
-    <h2>Zona de administración</h2>
-    <p>Bienvenido, <?php echo htmlspecialchars($_SESSION['user']['name']); ?>. Aquí puedes gestionar el sistema (simulado).</p>
+    <h2>Panel Admin</h2>
+    <p>Bienvenido al panel de administración, <?php echo htmlspecialchars($_SESSION['user']['name']); ?>.</p>
+    <p>Aquí puedes gestionar todos los usuarios y configuraciones del sistema.</p>
+    <p style="margin-top: 20px;">
+        <a href="index.php">Volver al inicio</a>
+    </p>
 </section>
-

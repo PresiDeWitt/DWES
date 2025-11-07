@@ -8,11 +8,10 @@
             <?php foreach ($errors as $e): ?><li><?php echo htmlspecialchars($e); ?></li><?php endforeach; ?>
         </ul>
     <?php endif; ?>
-
-    <form method="post" action="index.php?page=login">
-        <label>Email: <input type="email" name="email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required></label>
-        <label>Contraseña: <input type="password" name="password" required></label>
+    <form method="post">
+        <label><span>Email:</span><input type="email" name="email" required></label>
+        <label><span>Contraseña:</span><input type="password" name="password" required></label>
         <button type="submit">Entrar</button>
     </form>
+    <p style="margin-top: 15px;">¿Sin cuenta? <a href="index.php?page=register">Regístrate aquí</a></p>
 </section>
-
