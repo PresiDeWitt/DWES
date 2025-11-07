@@ -1,6 +1,5 @@
 <?php
-// Vista: guardarNombreUser.php
-// Variable esperada: $_SESSION['usuario_nombre']
+
 if (!isset($baseUrl)) {
     $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 }
